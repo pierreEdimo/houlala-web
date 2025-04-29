@@ -1,14 +1,16 @@
 <script lang="ts">
-    import AppHeader from './+appHeader.svelte';
     import BottomNav from './+bottomNav.svelte';
-    let {children} = $props();
+    import Header from './+header.svelte';
+    let {children, appHeader} = $props();
     import {HomeModern, Bars3, ShoppingBag, User} from 'svelte-hero-icons';
     import BottomNavButton from './+bottomNavButton.svelte';
 </script>
 
-<AppHeader/>
+<Header>
+    {@render appHeader()}
+</Header>
 
-<main class="main-body m-auto">
+<main class="main-body">
     {@render children()}
 </main>
 
@@ -21,14 +23,8 @@
 
 <style lang="scss">
     .main-body{
-        padding: 7rem 0 1rem 0;
-        width: 1080px;
-    }
-
-    @media screen AND (max-width: 767.99px) {
-        .main-body{
-            width: 95%;
-        }
-
+        width: 95%;
+        padding: 6.5rem 0 125px 0;
+        margin: auto;
     }
 </style>

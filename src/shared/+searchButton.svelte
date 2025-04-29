@@ -2,24 +2,31 @@
     import {Icon, MagnifyingGlass} from 'svelte-hero-icons';
 </script>
 
-<div class="search-button flex gap-2">
-    <button class="flex items-center justify-center cursor-pointer" style="width: 50px">
+<div class="search-button">
+    <button style="width: 50px">
         <Icon src={MagnifyingGlass} size="24" />
     </button>
     <input class="flex-1" type="text" placeholder="Recherche"/>
 </div>
 
 <style lang="scss">
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+    }
     .search-button{
         border: .13rem solid #d3d3d3;
         width: 100%;
         border-radius: 8px;
+        display: flex;
     }
 
     input{
         border: none;
         background: transparent;
-        padding: 1.2rem .5rem;
+        padding: .7rem .5rem;
     }
 
     input:focus{

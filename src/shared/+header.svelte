@@ -3,8 +3,8 @@
 </script>
 
 
-<header class="app-header w-full fixed">
-    <div class="app-header-content h-full m-auto flex items-center justify-between">
+<header class="app-header fixed">
+    <div class="app-header-content">
         {@render children()}
     </div>
 </header>
@@ -13,10 +13,17 @@
     .app-header{
         height: 6rem;
         background: #f4efe8;
+        width: 100vw;
+        padding-right: 8px;
+        position: fixed;
     }
 
     .app-header-content{
-        width: 95%;
-        background: transparent;
+        width: 98%;
+        height: inherit;
+        margin: auto;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
     }
 </style>

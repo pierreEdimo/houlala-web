@@ -2,8 +2,8 @@
     let {children} = $props();
 </script>
 
-<div class="bottom-nav fixed shadow-xl ">
-    <div style="width: 80%" class="flex items-center m-auto justify-between h-full">
+<div class="bottom-nav">
+    <div style="width: 80%" class="bottom-nav-content">
         {@render children()}
     </div>
 </div>
@@ -25,6 +25,15 @@
         margin: auto;
         left: 50%;
         transform: translateX(-50%);
+        position: fixed;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
 
+    .bottom-nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: auto;
+    }
 </style>
